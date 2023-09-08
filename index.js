@@ -18,7 +18,6 @@ process.on("uncaughtException", (err) => {
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: ['http://127.0.0.1:5173', 'http://localhost:5173'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
     credentials: true, // Enable credentials (cookies, authorization headers, etc)
