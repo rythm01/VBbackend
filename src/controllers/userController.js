@@ -96,7 +96,7 @@ exports.forgotPassPost = catchAsyncErrors(async (req, res, next) => {
 
         const token = jwt.sign(payload, secret, { expiresIn: '10m' });
 
-        const link = `http://localhost:3000/api/reset-password/${user._id}/${token}`;
+        const link = `https://v-bbackend.vercel.app/api/reset-password/${user._id}/${token}`;
         console.log(link);
 
         const to = user.email;
