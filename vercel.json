@@ -6,13 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-          "handle": "filesystem",
-          "src": "/public/css/(.*)", 
-          "destination": "/public/css/$1"
-        }
-      ],
     "rewrites": [
         {
             "source": "/(.*)",
