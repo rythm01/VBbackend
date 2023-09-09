@@ -15,11 +15,5 @@
           "src": "/public/images/(.*)",
           "dest": "/public/images/$1"  
         }
-      ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
-    ]
+      ]
 }
