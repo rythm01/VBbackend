@@ -18,7 +18,16 @@ process.on("uncaughtException", (err) => {
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: "https://verifiedbroker.vercel.app",
+    origin: (origin, callback) => {
+        const allowedOrigins = ['https://verifiedbroker.vercel.app', 'http://localhost:5173'];
+    
+        // Check if the origin is in the list of allowed origins or is empty (no origin header)
+        if (allowedOrigins.includes(origin) || !origin) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
