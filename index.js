@@ -18,11 +18,12 @@ process.on("uncaughtException", (err) => {
 app.use(cookieParser());
 
 const corsOptions = {
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
     credentials: true, // Enable credentials (cookies, authorization headers, etc)
 };
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
