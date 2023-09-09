@@ -8,13 +8,13 @@
     ],
     "rewrites": [
         {
-            "source": "/public/css/(.*)",
-            "destination": "/public/css/$1"
-        },
-        {
-            "source": "/public/images/(.*)",
-            "destination": "/public/images/$1"
-        },
+            "src": "/public/css/forgot-password.css", 
+            "dest": "/public/css/forgot-password.css" 
+          },
+          {
+            "src": "/public/images/login.png", 
+            "dest": "/public/images/login.png" 
+          },
         {
             "source": "/(.*)",
             "destination": "/"
