@@ -8,8 +8,8 @@
     ],
     "rewrites": [
         {
-            "src": "/public/css/forgot-password.css", 
-            "dest": "/public/css/forgot-password.css" 
+            "src": "/public/(.*)", 
+            "dest": "/public/$1"
           },
           {
             "src": "/public/images/login.png", 
