@@ -57,7 +57,8 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 exports.logout = catchAsyncErrors(async (req, res, next) => {
 
     res.cookie("tokenjwt", null, {
-        httponly: true,
+        httpOnly: true,
+        secure : true, //for secure connections
         expires: new Date(Date.now()),
     });
 
