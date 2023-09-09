@@ -18,7 +18,7 @@ process.on("uncaughtException", (err) => {
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: "*",
+    origin: "https://verifiedbroker.vercel.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
