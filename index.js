@@ -16,7 +16,6 @@ process.on("uncaughtException", (err) => {
     process.exit(1);
 })
 app.use(cookieParser());
-app.use(express.static('public'));
 
 const corsOptions = {
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods
