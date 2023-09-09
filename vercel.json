@@ -6,14 +6,18 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-          "src": "/public/css/(.*)",
-          "dest": "/public/css/$1"  
+            "source": "/public/css/(.*)",
+            "destination": "/public/css/$1"
         },
         {
-          "src": "/public/images/(.*)",
-          "dest": "/public/images/$1"  
+            "source": "/public/images/(.*)",
+            "destination": "/public/images/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/"
         }
-      ]
+    ]
 }
